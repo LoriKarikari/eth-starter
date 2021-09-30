@@ -11,7 +11,6 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true)
 
   async function createTodo() {
-    console.log(contract)
     const todoTxn = await contract?.functions.createTodo(todo)
   }
 

@@ -1,8 +1,8 @@
-import chai, { expect } from 'chai';
-import { ethers } from 'hardhat';
-import { solidity } from 'ethereum-waffle';
+import chai, { expect } from 'chai'
+import { ethers } from 'hardhat'
+import { solidity } from 'ethereum-waffle'
 
-chai.use(solidity);
+chai.use(solidity)
 
 // describe('Todo', function () {
 //   it("Should return the new greeting once it's changed", async function () {

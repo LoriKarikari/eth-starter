@@ -1,5 +1,5 @@
 //SPDX-License-Identifier: Unlicense
-pragma solidity ^0.8.3;
+pragma solidity >=0.8.3;
 
 import 'hardhat/console.sol';
 import '@openzeppelin/contracts/utils/Counters.sol';
@@ -18,7 +18,7 @@ contract Todo is ReentrancyGuard {
     }
 
     struct TodoItem {
-        uint todoId;
+        uint256 todoId;
         string text;
         address user;
         uint256 createdAt;
@@ -29,13 +29,13 @@ contract Todo is ReentrancyGuard {
 
     mapping(uint256 => TodoItem) private idToTodoItem;
 
-		event TodoItemCreated {
-			uint indexed todoItemId;
-			string text;
-			address user;
-			uint256 createdAt;
-			bool completed;
-		}
+    event TodoItemCreated(
+        uint256 indexed todoItemId,
+        string text,
+        address user,
+        uint256 createdAt,
+        bool completed
+    );
 
     function createTodo(string memory _text) public {
         _todoItemIds.increment();
@@ -51,13 +51,7 @@ contract Todo is ReentrancyGuard {
             )
         );
 
-				emit TodoItemCreated(
-					 todoItemId,
-            _text,
-            msg.sender,
-            block.timestamp,
-            false
-				);
+        emit TodoItemCreated(todoItemId, _text, msg.sender, block.timestamp, false);
     }
 
     function getTodos() public view returns (TodoItem[] memory) {

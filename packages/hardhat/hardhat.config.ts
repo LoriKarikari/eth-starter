@@ -1,10 +1,11 @@
-import '@nomiclabs/hardhat-waffle'
 import '@nomiclabs/hardhat-ethers'
+import '@nomiclabs/hardhat-solhint'
+import '@nomiclabs/hardhat-waffle'
 import '@typechain/hardhat'
-import 'hardhat-watcher'
-import 'hardhat-deploy'
-import { HardhatUserConfig } from 'hardhat/types'
 import dotenv from 'dotenv'
+import 'hardhat-deploy'
+import 'hardhat-watcher'
+import { HardhatUserConfig } from 'hardhat/types'
 
 dotenv.config()
 
