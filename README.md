@@ -32,7 +32,7 @@ git clone https://github.com/LoriKarikari/eth-starter.git
 
 ### Development
 
-This will start the Next.js application and the [hardhat-deploy](https://github.com/wighawag/hardhat-deploy) watcher which will compile and deploy the hardhat app locally and also generate TypeScript types on file change 🎉
+This command will start the Next.js application and the [hardhat-deploy](https://github.com/wighawag/hardhat-deploy) watcher which will compile and deploy the hardhat app locally and also generate TypeScript types on file change 🎉. It also outputs the test accounts.
 
 ```shell
 pnpm dev
@@ -41,6 +41,6 @@ pnpm dev
 Now you can view the example application at `http://localhost:3000`.
 
 In VSCode, prettier formatting on save only works with JS/TS files. For some reason the plugin doesn't pick up the Solidity config. To format all files with prettier run:
-```
+```shell
 pnpm prettier
 ```

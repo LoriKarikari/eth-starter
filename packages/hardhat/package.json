@@ -6,7 +6,7 @@
   "scripts": {
     "compile": "pnpm hardhat compile",
     "deploy": "pnpm hardhat run scripts/deploy.ts",
-    "dev": "pnpm hardhat node",
+    "dev": "pnpm hardhat node --watch --show-accounts",
     "test": "pnpm hardhat test",
     "lint": ""
   },

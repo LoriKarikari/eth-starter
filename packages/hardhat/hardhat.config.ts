@@ -24,7 +24,7 @@ const config: HardhatUserConfig = {
     // rinkeby: {
     //   // url: `https://eth-rinkeby.alchemyapi.io/v2/${}`,
     //   accounts:
-    //     'd62197785b627595f62a08ac9b88b82e066bf71aea7e9488a6214170add12af6',
+    //     '',
     //   ],
     // },
   },
